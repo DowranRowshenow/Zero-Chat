@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zero_chat/helpers/size_config.dart';
 
 import '../components/message_item.dart';
 import '../components/message_sender.dart';
@@ -34,91 +33,87 @@ class _ChatMenuState extends State<ChatMenu> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: constants.drawerColorDark,
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-        child: Stack(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: const [
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                    ),
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                      isLeft: true,
-                    ),
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                    ),
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                      isLeft: true,
-                    ),
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                    ),
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                      isLeft: true,
-                    ),
-                    MessageItem(
-                      message:
-                          "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM",
-                      sender: "Dowran",
-                      date: "15:14",
-                    ),
-                    MessageItem(
-                      message:
-                          "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
-                      sender: "Dowran",
-                      date: "15:14",
-                      isLeft: true,
-                    ),
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                      isLeft: true,
-                    ),
-                    MessageItem(
-                      message: "asdasdasd",
-                      sender: "Dowran",
-                      date: "15:14",
-                      isLeft: true,
-                    ),
-                  ],
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      color: constants.themeManager.drawerColor(),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+      child: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: const [
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
                 ),
-              ),
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
+                  isLeft: true,
+                ),
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
+                ),
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
+                  isLeft: true,
+                ),
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
+                ),
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
+                  isLeft: true,
+                ),
+                MessageItem(
+                  message:
+                      "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM",
+                  sender: "Dowran",
+                  date: "15:14",
+                ),
+                MessageItem(
+                  message:
+                      "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+                  sender: "Dowran",
+                  date: "15:14",
+                  isLeft: true,
+                ),
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
+                  isLeft: true,
+                ),
+                MessageItem(
+                  message: "asdasdasd",
+                  sender: "Dowran",
+                  date: "15:14",
+                  isLeft: true,
+                ),
+              ],
             ),
-            Center(
-              child: Column(
-                children: [
-                  Expanded(child: Container()),
-                  const MessageSender(),
-                  const SizedBox(height: 15),
-                ],
-              ),
+          ),
+          Center(
+            child: Column(
+              children: [
+                Expanded(child: Container()),
+                const MessageSender(),
+                const SizedBox(height: 15),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

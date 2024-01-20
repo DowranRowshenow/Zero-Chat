@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zero_chat/components/profile_pic.dart';
 
-import '../helpers/constants.dart' as constants;
-
 class ContactsItem extends StatelessWidget {
   const ContactsItem({
     Key? key,
