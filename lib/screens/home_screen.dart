@@ -38,32 +38,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: constants.themeManager.bgOutColor(),
       body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           NavBar(onTap: () {
             setState(() {});
           }),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(getProportionateScreenHeight(30)),
-              margin: EdgeInsets.fromLTRB(
-                0,
-                getProportionateScreenHeight(15),
-                getProportionateScreenHeight(15),
-                getProportionateScreenHeight(15),
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(constants.bgBorderRadius),
-                color: constants.themeManager.bgColor(),
-                boxShadow: [
-                  BoxShadow(
-                    color: constants.themeManager.shadowColor(),
-                    spreadRadius: 0.1,
-                    blurRadius: 1,
-                  ),
-                ],
-              ),
-              child: constants.navigate.getCurrentMenu(),
-            ),
+            child: constants.navigate.getCurrentMenu(),
           ),
         ],
       ),

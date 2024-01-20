@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/client._item.dart';
+import '../components/client_item.dart';
 import '../components/top_bar.dart';
 import '../forms/add_client_form.dart';
 import '../helpers/size_config.dart';

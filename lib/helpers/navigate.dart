@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zero_chat/menus/chat_menu.dart';
 
 import '../menus/dashboard_menu.dart';
 import '../menus/clients_menu.dart';
@@ -10,10 +11,12 @@ import 'constants.dart' as constants;
 
 class Navigate {
   constants.ScreenState currentScreen = constants.ScreenState.home;
-  constants.MenuState currentMenu = constants.MenuState.clients;
+  constants.MenuState currentMenu = constants.MenuState.chat;
 
   String getMenuTitle() {
     switch (currentMenu) {
+      case constants.MenuState.chat:
+        return "ROOM";
       case constants.MenuState.dashboard:
         return "DASHBOARD";
       case constants.MenuState.clients:
@@ -27,6 +30,8 @@ class Navigate {
 
   Widget getCurrentMenu() {
     switch (currentMenu) {
+      case constants.MenuState.chat:
+        return const ChatMenu();
       case constants.MenuState.dashboard:
         return const DashboardMenu();
       case constants.MenuState.clients:

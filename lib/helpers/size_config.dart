@@ -6,12 +6,14 @@ class SizeConfig {
   static late double screenHeight;
   static double? defaultSize;
   static Orientation? orientation;
+  static late double appretiatedLength;
 
   void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
     orientation = _mediaQueryData.orientation;
+    appretiatedLength = getAppretiatedLength();
   }
 }
 
@@ -43,4 +45,9 @@ double getProportionateScreenWidth(double inputWidth) {
   double screenWidth = SizeConfig.screenWidth;
   // 375 is the layout width that designer use
   return (inputWidth / 1440.0) * screenWidth;
+}
+
+double getAppretiatedLength() {
+  double appretiatedLength = SizeConfig.screenWidth - 320 - 60 - 30 - 10 - 40;
+  return appretiatedLength;
 }

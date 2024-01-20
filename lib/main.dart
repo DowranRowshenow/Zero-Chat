@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:windows_single_instance/windows_single_instance.dart';
 import 'package:window_manager/window_manager.dart';
-import 'package:zero_chat/screens/login_screen.dart';
 
+import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 import 'components/scroll_behavior.dart';
 import 'helpers/constants.dart' as constants;
@@ -24,7 +24,7 @@ void main(List<String> args) async {
     //await windowManager.setTitleBarStyle(TitleBarStyle.hidden);
     //await WindowManager.instance.center();
     //await WindowManager.instance.show();
-    //await WindowManager.instance.setFullScreen(true);
+    await WindowManager.instance.setFullScreen(true);
     //await WindowManager.instance.setSkipTaskbar(false);
     //await windowManager.setAsFrameless();
   });
@@ -102,11 +102,12 @@ class _MyAppState extends State<MyApp> {
           brightness: Brightness.light,
         ),
         textSelectionTheme: const TextSelectionThemeData(
-            selectionColor: constants.textHighlightColor),
-        //scaffoldBackgroundColor: constants.bgOutColor.withOpacity(0.5),
-        //splashColor: Colors.transparent,
-        //highlightColor: Colors.black.withOpacity(0.2),
-        //splashFactory: InkRipple.splashFactory,
+          selectionColor: constants.textHighlightColor,
+          cursorColor: constants.cursorColor,
+        ),
+        splashColor: Colors.transparent,
+        highlightColor: Colors.black.withOpacity(0.05),
+        splashFactory: InkRipple.splashFactory,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
@@ -115,9 +116,6 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: constants.blueGrey950.withOpacity(1),
           elevation: 1,
         ),
-        splashColor: Colors.transparent,
-        highlightColor: Colors.black.withOpacity(0.2),
-        splashFactory: InkRipple.splashFactory,
         colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: constants.themeManager.accentColor(),
           brightness: Brightness.dark,
@@ -126,6 +124,9 @@ class _MyAppState extends State<MyApp> {
           selectionColor: constants.textHighlightColor,
           cursorColor: constants.cursorColor,
         ),
+        splashColor: Colors.transparent,
+        highlightColor: Colors.white.withOpacity(0.1),
+        splashFactory: InkRipple.splashFactory,
       ),
       themeMode: constants.themeManager.themeMode,
       builder: (context, child) {

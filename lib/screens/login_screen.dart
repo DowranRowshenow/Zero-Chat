@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 15),
                   RippleContainer(
                     padding: const EdgeInsets.all(10),
-                    color: const Color.fromARGB(255, 244, 75, 151),
+                    color: constants.buttonColor2,
                     borderRadius: constants.inputBorderRadius,
                     onTap: () {
                       constants.navigate
@@ -57,10 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: const Text(
                       "Sign in",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
                 ],

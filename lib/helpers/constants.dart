@@ -9,7 +9,7 @@ Navigate navigate = Navigate();
 GlobalKey<ScaffoldState> scaffold = GlobalKey();
 
 // ENUMS
-enum MenuState { dashboard, clients, payments, settings }
+enum MenuState { chat, dashboard, clients, payments, settings }
 
 enum ScreenState { home, register }
 
@@ -24,6 +24,7 @@ const double bgBorderRadius = 7;
 const double inputBorderRadius = 3;
 const double buttonBorderRadius = 3;
 const double splashRadius = 18;
+const double messageRadius = 15;
 
 const double borderWidth = 0.4;
 
@@ -38,8 +39,9 @@ const drawerColorDark =
 
 const activeButtonColor = Color.fromARGB(255, 75, 59, 128);
 const buttonColor = Color.fromARGB(63, 201, 207, 218);
+const buttonColor2 = Color.fromARGB(255, 244, 75, 151);
 
-const cursorColor = Color.fromARGB(210, 73, 61, 84);
+const cursorColor = Colors.grey;
 //const textHighlightColor = Color.fromARGB(150, 60, 60, 60);
 const textHighlightColor = Color.fromARGB(210, 47, 42, 51);
 
